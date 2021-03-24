@@ -13,27 +13,27 @@ function Dashboard() {
       "User-Agent"   : "KEVINS-UNTAPPD"
     });
   
-    useEffect(() => {
-      fetch("https://api.untappd.com/v4/method_name?client_id=BD9452A73C5AEDE4490306B0AD3B9FA92FF184B5&client_secret=4E3CB5478FE60E495F65156E9CB3ED36B5FD8A50", 
-      {
-        method: "GET",
-        headers: headers
-      })
-        .then(res => res.json())
-        .then(
-          (result) => {
-            console.log('result: ',result)
-            setIsLoaded(true);
-            setItems(result);
-            console.log('items: ',items)
-          },
-          (error) => {
-            console.log('error: ',error)
-            setIsLoaded(true);
-            setError(error);
-          }
-        )
-    })
+    // useEffect(() => {
+    //   fetch("https://api.untappd.com/v4/method_name?client_id=BD9452A73C5AEDE4490306B0AD3B9FA92FF184B5&client_secret=4E3CB5478FE60E495F65156E9CB3ED36B5FD8A50", 
+    //   {
+    //     method: "GET",
+    //     headers: headers
+    //   })
+    //     .then(res => res.json())
+    //     .then(
+    //       (result) => {
+    //         console.log('result: ',result)
+    //         setIsLoaded(true);
+    //         setItems(result);
+    //         console.log('items: ',items)
+    //       },
+    //       (error) => {
+    //         console.log('error: ',error)
+    //         setIsLoaded(true);
+    //         setError(error);
+    //       }
+    //     )
+    // })
 
     if (error) {
       return <div>Error: {error.message}</div>;
