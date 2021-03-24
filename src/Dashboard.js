@@ -32,7 +32,9 @@ function Dashboard() {
             setError(error);
           }
         )
-    }, [])
+    }, [items])
+
+    console.log('items: ',items)
   
     if (error) {
       return <div>Error: {error.message}</div>;
