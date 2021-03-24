@@ -25,6 +25,7 @@ function Dashboard() {
             console.log('result: ',result)
             setIsLoaded(true);
             setItems(result);
+            console.log('items: ',items)
           },
           (error) => {
             console.log('error: ',error)
@@ -33,7 +34,7 @@ function Dashboard() {
           }
         )
     })
-    
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
