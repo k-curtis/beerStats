@@ -32,7 +32,7 @@ function Dashboard() {
             setError(error);
           }
         )
-    }, [items])
+    }, [headers])
 
     console.log('items: ',items)
   
